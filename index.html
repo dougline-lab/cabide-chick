@@ -46,6 +46,10 @@
                 <a href="#" class="icon-link" title="Meu Perfil"><i class="fas fa-user"></i></a>
                 <a href="#" class="icon-link" title="Meu Carrinho"><i class="fas fa-shopping-cart"></i></a>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars icon-open"></i>
+                <i class="fas fa-times icon-close"></i>
+            </button>
         </header>
 
         <main>
@@ -104,6 +108,14 @@
 
         // Troca de imagem a cada 4 segundos (4000ms)
         setInterval(nextSlide, 4000);
+
+        // Script para o Menu Mobile (Hamburguer)
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
+            header.classList.toggle('mobile-menu-open');
+        });
     </script>
 
 </body>

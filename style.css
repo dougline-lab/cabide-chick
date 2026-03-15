@@ -82,6 +82,7 @@ header {
     align-items: center;
     margin-bottom: 40px;
     flex-wrap: wrap; /* Permite que o conteúdo quebre linha de forma organizada se necessário */
+    padding: 10px 20px;
 }
 
 .logo-img {
@@ -139,6 +140,20 @@ header {
     color: var(--branco);
     background-color: var(--rose-gold);
     text-shadow: none;
+}
+
+/* --- Botão Menu Mobile (Hamburguer) --- */
+.mobile-menu-toggle {
+    display: none; /* Escondido no desktop */
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle .icon-close {
+    display: none;
 }
 
 /* --- Seção Hero (Principal) --- */
@@ -232,9 +247,41 @@ footer {
 
 /* --- Responsividade para Celulares (Mobile) --- */
 @media (max-width: 768px) {
+    /* No mobile, o header vira uma linha com logo e hamburguer */
     header {
-        flex-direction: column; /* Empilha Logo, Menu e Ícones */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Mostra o botão hamburguer */
+    }
+
+    /* Esconde o menu e ícones por padrão no mobile */
+    .menu-navegacao, .header-icons {
+        display: none;
+    }
+
+    /* Quando o menu está aberto */
+    header.mobile-menu-open {
+        flex-direction: column; /* Empilha tudo quando o menu está aberto */
+        align-items: center;
         gap: 20px;
+    }
+
+    header.mobile-menu-open .menu-navegacao,
+    header.mobile-menu-open .header-icons {
+        display: flex; /* Mostra o menu e os ícones */
+        flex-direction: column; /* Empilha os itens do menu */
+        width: 100%;
+        align-items: center;
+    }
+
+    header.mobile-menu-open .mobile-menu-toggle .icon-open {
+        display: none; /* Esconde o ícone de abrir */
+    }
+    header.mobile-menu-open .mobile-menu-toggle .icon-close {
+        display: block; /* Mostra o ícone de fechar */
     }
     
     .hero-section {
