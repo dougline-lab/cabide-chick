@@ -259,7 +259,7 @@ footer {
 
     /* Esconde o menu e ícones por padrão no mobile */
     .menu-navegacao, .header-icons {
-        display: none;
+        display: none !important; /* Força o desaparecimento para evitar conflitos */
     }
 
     /* Quando o menu está aberto */
