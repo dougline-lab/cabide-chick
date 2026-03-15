@@ -1,0 +1,248 @@
+/* Configuração das Cores da Marca */
+:root {
+    --rose-gold: #C58E7F;    /* Detalhes e botões */
+    --dourado: #E2B49A;      /* Ícones e realces */
+    --off-white: #F3E9E4;    /* Fundo do site */
+    --marrom: #7A5144;       /* Textos principais */
+    --branco: #FFFFFF;
+}
+
+/* Reset básico para tirar margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fonte limpa e moderna */
+}
+
+body {
+    /* Usando a imagem como plano de fundo */
+    background-image: url('fundo.png');
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* O fundo fica fixo ao rolar a tela */
+    color: var(--marrom);
+    display: block;
+    min-height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+/* --- Faixa Superior --- */
+.top-banner {
+    background-color: #000; /* Cor preta */
+    color: var(--branco);
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.coupon-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.copy-btn {
+    background-color: var(--rose-gold);
+    color: var(--branco);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.copy-btn:hover {
+    background-color: #a56d5e; /* Tom de Rose Gold mais escuro para o hover */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px; /* Adicionamos o padding aqui para o conteúdo não colar nas bordas */
+}
+
+/* Estilo do Topo (Logo) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre linha de forma organizada se necessário */
+}
+
+.logo-img {
+    max-width: 234px;      /* Aumentado em mais 20% (de 195px para 234px) */
+    width: 100%;           /* Garante que se adapta em celulares */
+    height: auto;
+    border-radius: 50%;    /* Recorta a imagem em formato circular */
+    box-shadow: 0 8px 20px rgba(197, 142, 127, 0.2); /* Sombra suave em Rose Gold */
+}
+
+/* --- Menu de Navegação --- */
+.menu-navegacao {
+    display: flex;
+    gap: 5px; /* Reduzi o espaço entre os botões para caberem melhor */
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens se quebrarem linha */
+}
+
+.menu-item {
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo semitransparente para contraste */
+    text-decoration: none;
+    color: var(--branco);  /* Tom mais claro para destacar no fundo */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.83rem; /* Aumentado em ~10% */
+    padding: 9px 11px;  /* Aumentado em ~10% */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil para legibilidade */
+}
+
+.menu-item:hover {
+    background-color: var(--rose-gold);
+    color: var(--branco);
+    text-shadow: none; /* Remove a sombra no hover para um look mais limpo */
+}
+
+/* --- Ícones do Cabeçalho (Perfil e Carrinho) --- */
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.icon-link {
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo consistente com o menu */
+    color: var(--branco); /* Tom claro igual ao menu */
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil para legibilidade */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.icon-link:hover {
+    color: var(--branco);
+    background-color: var(--rose-gold);
+    text-shadow: none;
+}
+
+/* --- Seção Hero (Principal) --- */
+.hero-section {
+    display: flex;
+    align-items: flex-start; /* Alinha elementos no topo ao invés do centro */
+    padding-top: 60px;       /* Define a altura exata do texto (ajuste se quiser mais alto/baixo) */
+    min-height: 60vh; /* Ocupa uma boa parte da tela */
+    gap: 40px;
+}
+
+.hero-text {
+    flex-basis: 50%; /* Define a base da largura como 50% */
+}
+
+.hero-text h1 {
+    font-family: 'Cinzel', serif; /* Fonte Clássica e Grande */
+    font-size: 3.5rem; /* Letras grandes */
+    color: var(--branco);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700; /* Negrito para destaque */
+}
+
+.hero-text p {
+    font-family: 'Montserrat', sans-serif; /* Fonte Moderna e Limpa */
+    font-size: 1.1rem; /* Tamanho normal, mas legível */
+    color: var(--branco);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.7;
+    max-width: 500px; /* Limita a largura do parágrafo para melhor leitura */
+}
+
+.hero-image {
+    flex-basis: 37.5%; /* Reduzido em 25% (de 50% para ~37.5%) */
+    position: relative; /* Necessário para posicionar as imagens uma sobre a outra */
+    min-height: 660px;  /* Aumentado de 600px para 660px (+10%) */
+    margin-top: -100px; /* Puxa a área para cima, expandindo em direção ao menu */
+}
+
+.slide-img {
+    position: absolute; /* Tira do fluxo normal e permite sobreposição */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer, recortando se necessário */
+    border-radius: 20px; /* Bordas arredondadas elegantes */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para destacar do fundo */
+}
+
+.slide-img.active {
+    opacity: 1; /* Apenas a imagem com essa classe fica visível */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* --- Botão Flutuante WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Verde WhatsApp */
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2000; /* Garante que fique acima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efeito de pulso ao passar o mouse */
+}
+
+/* --- Responsividade para Celulares (Mobile) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Empilha Logo, Menu e Ícones */
+        gap: 20px;
+    }
+    
+    .hero-section {
+        flex-direction: column; /* Texto em cima, imagem embaixo */
+        text-align: center;
+    }
+    
+    .hero-text {
+        width: 100%; /* Texto ocupa a largura toda no celular */
+    }
+}

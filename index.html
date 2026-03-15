@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabide Chic Concept</title>
+    
+    <!-- Link para o nosso arquivo de estilo -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Link para ícones (usaremos o ícone do WhatsApp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts: Cinzel e Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-banner">
+        <div class="banner-content">
+            <span>DIA DO CONSUMIDOR 10%OFF</span>
+            <div class="coupon-section">
+                <span>Use o cupom: <strong id="coupon-code">CONSUMIDOR10</strong></span>
+                <button class="copy-btn" onclick="copyCoupon()" title="Copiar Cupom"><i class="fas fa-copy"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="logo.jpeg" alt="Logo Cabide Chic Concept" class="logo-img">
+            <nav class="menu-navegacao">
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Blusas</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Jaquetas</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Blazer</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Saias</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Calças</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Vestidos</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Shorts</a>
+                <a href="https://www.instagram.com/cabidechic_concept?igsh=azRna3NtbXhhYWhw" class="menu-item" target="_blank">Conjuntos</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="#" class="icon-link" title="Meu Perfil"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon-link" title="Meu Carrinho"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h1>Coleção 2026</h1>
+                    <p>A sofisticação de 2026 chegou ao seu cabide. Explore uma coleção feita para mulheres que não esperam o futuro chegar, elas o vestem com autenticidade e brilho próprio.</p>
+                </div>
+                <div class="hero-image">
+                    <!-- Slide de Imagens -->
+                    <img src="roupas%20opcoes/foto1.png" class="slide-img active" alt="Modelo Coleção 2026 - Look 1">
+                    <img src="roupas%20opcoes/foto2.png" class="slide-img" alt="Modelo Coleção 2026 - Look 2">
+                    <img src="roupas%20opcoes/foto3.png" class="slide-img" alt="Modelo Coleção 2026 - Look 3">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Cabide Chic Concept. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5531997966410?text=Olá!%20Gostaria%20de%20ver%20o%20catálogo." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function copyCoupon() {
+            const couponCode = document.getElementById('coupon-code').innerText;
+            navigator.clipboard.writeText(couponCode).then(() => {
+                // Alerta para o usuário que o cupom foi copiado
+                alert('Cupom "' + couponCode + '" copiado!');
+            }).catch(err => {
+                console.error('Erro ao copiar o cupom: ', err);
+                alert('Não foi possível copiar o cupom.');
+            });
+        }
+
+        // Script para o Slide de Fotos
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-img');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            // Remove a classe 'active' da imagem atual
+            slides[currentSlide].classList.remove('active');
+            // Calcula a próxima imagem (volta para 0 se chegar no fim)
+            currentSlide = (currentSlide + 1) % totalSlides;
+            // Adiciona a classe 'active' na nova imagem
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Troca de imagem a cada 4 segundos (4000ms)
+        setInterval(nextSlide, 4000);
+    </script>
+
+</body>
+</html>
