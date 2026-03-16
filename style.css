@@ -167,7 +167,6 @@ header {
     padding-top: 60px;       /* Define a altura exata do texto (ajuste se quiser mais alto/baixo) */
     /* min-height removido para não criar espaço vazio abaixo da imagem */
     gap: 40px;
-    /* margin-bottom removido para evitar conflitos */
 }
 
 .hero-text {
@@ -202,7 +201,6 @@ header {
     padding: 20px; /* Espaço entre a moldura e a foto */
     border-radius: 30px; /* Arredondamento da moldura */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra suave */
-    margin-bottom: -100px; /* Margem negativa no carrossel para aproximar a próxima seção sem sobrepor */
 }
 
 .slide-img {
@@ -257,7 +255,7 @@ footer {
 /* --- Seção de Produtos em Destaque --- */
 .featured-products {
     padding: 0 20px 80px; /* Topo 0 para subir a seção, laterais 20px, fundo 80px */
-    margin-top: 0; /* Resetado para 0 para corrigir a sobreposição */
+    margin-top: -380px; /* Ajuste extremo para garantir que o espaço desapareça */
     text-align: center;
     position: relative; /* Garante que a seção fique na camada correta */
     z-index: 5;
