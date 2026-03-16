@@ -255,7 +255,7 @@ footer {
 /* --- Seção de Produtos em Destaque --- */
 .featured-products {
     padding: 0 20px 80px; /* Topo 0 para subir a seção, laterais 20px, fundo 80px */
-    margin-top: -380px; /* Ajuste extremo para garantir que o espaço desapareça */
+    margin-top: -220px; /* Ajuste agressivo para eliminar totalmente o espaço visual */
     text-align: center;
     position: relative; /* Garante que a seção fique na camada correta */
     z-index: 5;
