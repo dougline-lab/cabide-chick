@@ -251,7 +251,7 @@ footer {
 
 /* --- Seção de Produtos em Destaque --- */
 .featured-products {
-    padding: 80px 20px;
+    padding: 0 20px 80px; /* Topo 0 para subir a seção, laterais 20px, fundo 80px */
     text-align: center;
 }
 
