@@ -197,19 +197,22 @@ header {
     position: relative; /* Necessário para posicionar as imagens uma sobre a outra */
     min-height: 660px;  /* Aumentado de 600px para 660px (+10%) */
     margin-top: -100px; /* Puxa a área para cima, expandindo em direção ao menu */
+    background-color: rgba(255, 255, 255, 0.9); /* Moldura clara estilo card */
+    padding: 20px; /* Espaço entre a moldura e a foto */
+    border-radius: 30px; /* Arredondamento da moldura */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Sombra suave */
 }
 
 .slide-img {
     position: absolute; /* Tira do fluxo normal e permite sobreposição */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 20px; /* Ajuste para ficar dentro da moldura */
+    left: 20px; /* Ajuste para ficar dentro da moldura */
+    width: calc(100% - 40px); /* Largura ajustada descontando o padding */
+    height: calc(100% - 40px); /* Altura ajustada descontando o padding */
     object-fit: cover; /* Garante que a imagem cubra a área sem distorcer, recortando se necessário */
     border-radius: 20px; /* Bordas arredondadas elegantes */
     opacity: 0; /* Começa invisível */
     transition: opacity 1s ease-in-out; /* Transição suave de 1 segundo */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para destacar do fundo */
 }
 
 .slide-img.active {
