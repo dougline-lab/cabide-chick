@@ -167,6 +167,7 @@ header {
     padding-top: 60px;       /* Define a altura exata do texto (ajuste se quiser mais alto/baixo) */
     /* min-height removido para não criar espaço vazio abaixo da imagem */
     gap: 40px;
+    margin-bottom: -150px; /* Margem negativa para aproximar a próxima seção */
 }
 
 .hero-text {
