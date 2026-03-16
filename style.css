@@ -167,6 +167,7 @@ header {
     padding-top: 60px;       /* Define a altura exata do texto (ajuste se quiser mais alto/baixo) */
     min-height: 60vh; /* Ocupa uma boa parte da tela */
     gap: 40px;
+    margin-bottom: 50px; /* Garante separação segura da seção inferior */
 }
 
 .hero-text {
@@ -255,6 +256,7 @@ footer {
 /* --- Seção de Produtos em Destaque --- */
 .featured-products {
     padding: 80px 20px;
+    margin-top: 0; /* Zera qualquer margem negativa para evitar sobreposição */
     text-align: center;
 }
 
