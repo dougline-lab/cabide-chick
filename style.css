@@ -165,7 +165,7 @@ header {
     display: flex;
     align-items: flex-start; /* Alinha elementos no topo ao invés do centro */
     padding-top: 60px;       /* Define a altura exata do texto (ajuste se quiser mais alto/baixo) */
-    /* min-height removido para não criar espaço vazio abaixo da imagem */
+    min-height: 60vh; /* Altura mínima restaurada */
     gap: 40px;
 }
 
@@ -254,8 +254,8 @@ footer {
 
 /* --- Seção de Produtos em Destaque --- */
 .featured-products {
-    padding: 0 20px 80px; /* Topo 0 para subir a seção, laterais 20px, fundo 80px */
-    margin-top: -220px; /* Ajuste agressivo para eliminar totalmente o espaço visual */
+    padding: 80px 20px; /* Espaçamento original restaurado */
+    margin-top: 0; /* Margem negativa removida */
     text-align: center;
     position: relative; /* Garante que a seção fique na camada correta */
     z-index: 5;
